@@ -1,50 +1,214 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 180px;
+
+  object-fit: contain;
+}
+
+/* TOP LEFT LOGO */
+.top-logo {
+  position: fixed;
+
+  top: 20px;
+  left: 40px;
+
+  z-index: 1000;
+}
+
+.top-logo img {
+  width: 170px;
+
+  object-fit: contain;
+}
+
+body {
   font-family: Arial, sans-serif;
-  background: #0b0c10;
-  color: white;
+
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.85)
+    ),
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
 }
 
 .container {
-  text-align: center;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-box {
-  background: #1f2833;
-  padding: 30px;
-  border-radius: 10px;
-  width: 300px;
+  width: 400px;
+
+  padding: 45px;
+
+  border-radius: 18px;
+
+  background: rgba(15,15,15,0.9);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.form-box h1 {
+  text-align: center;
+
+  color: #1ce783;
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.form-box h2 {
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  font-size: 28px;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+
+  padding: 15px;
+
+  margin-bottom: 18px;
+
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+
+  background: #222;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #1ce783;
 }
 
 button {
   width: 100%;
-  padding: 10px;
-  background: #1db954;
+
+  padding: 15px;
+
   border: none;
-  color: white;
+  border-radius: 8px;
+
+  background: #1ce783;
+
+  color: black;
+
+  font-size: 16px;
   font-weight: bold;
+
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
-span {
-  color: #1db954;
-  cursor: pointer;
+button:hover {
+  transform: scale(1.02);
+
+  opacity: 0.9;
 }
 
 #message {
-  margin-top: 10px;
+  text-align: center;
+
+  margin-top: 15px;
+
+  font-size: 15px;
+}
+
+.forgot {
+  text-align: right;
+
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  color: #1ce783;
+
+  cursor: pointer;
+
   font-size: 14px;
-  color: #f5c518;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.form-box p {
+  text-align: center;
+
+  margin-top: 10px;
+}
+
+.form-box a {
+  color: #1ce783;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+/* FORGOT PASSWORD PAGE */
+.forgot-body {
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.9)
+    ),
+    url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+}
+
+.forgot-box {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.reset-text {
+  text-align: center;
+
+  color: #bbb;
+
+  margin-bottom: 25px;
+
+  line-height: 1.5;
 }

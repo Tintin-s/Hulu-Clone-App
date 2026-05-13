@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reset Password</title>
+
+  <link rel="stylesheet" href="frontcss.css">
+</head>
+
+<body class="forgot-body">
+    <div class="top-logo">
+        <img src="assets/logo.png" alt="Cinevo Logo">
+    </div>
+  <div class="container">
+
+    <div class="form-box forgot-box">
+
+      <h2>Reset Password</h2>
+
+      <p class="reset-text">
+        Enter your email and create a new password.
+      </p>
+
+      <!-- Email -->
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+      >
+
+      <!-- New Password -->
+      <input
+        type="password"
+        id="new-password"
+        placeholder="New Password"
+      >
+
+      <!-- Confirm Password -->
+      <input
+        type="password"
+        id="confirm-password"
+        placeholder="Confirm Password"
+      >
+
+      <!-- Button -->
+      <button onclick="resetPassword()">
+        Reset Password
+      </button>
+
+      <p id="message"></p>
+
+      <p>
+        Back to
+        <a href="login.html">Login</a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
